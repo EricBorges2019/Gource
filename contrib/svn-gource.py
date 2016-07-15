@@ -69,7 +69,7 @@ def processXmltree(xmltree):
                 continue;
 
             # join output
-            print( "|".join( ( "%d" % int(timestamp), "%s" % author.encode("utf-8"), "%s" % pathentry.get("action"), "%s" % pathentry.text.encode("utf-8"), "" ) ) )
+            print( "|".join( ( "{0:d}".format(int(timestamp)), "{0!s}".format(author.encode("utf-8")), "{0!s}".format(pathentry.get("action")), "{0!s}".format(pathentry.text.encode("utf-8")), "" ) ) )
 
 def printUsage(message):
     sys.stderr.write(_USAGE)
